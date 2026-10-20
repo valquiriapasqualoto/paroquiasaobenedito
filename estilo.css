@@ -45,11 +45,11 @@ body {
 
 /* PADRONIZAÇÃO DAS DUAS IMAGENS DO CABEÇALHO (ALTAR E 60 ANOS) */
 .logo-cabecalho {
-  width: 90px;
-  height: 90px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #D4A359;
+  border: 3px solid #D4A359;
 }
 
 .header-titulos {
