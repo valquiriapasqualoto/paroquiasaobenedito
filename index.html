@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- CABEÇALHO PRINCIPAL COM MENU DE NAVEGAÇÃO -->
+<header class="cabecalho-principal">
+  
+  <!-- Título e Subtítulo -->
+  <div class="header-titulos">
+    <h1>Paróquia Espiritualidade e Fé</h1>
+    <p>Acolhida, oração e vida em comunidade</p>
+  </div>
+
+  <!-- Barra de Navegação Principal -->
+  <nav class="menu-navegacao" aria-label="Menu Principal">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="#noticias">Notícias</a></li>
+      <li><a href="#desenvolvimento">Serviços</a></li>
+      <li><a href="batismo.html">Batismo</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+</header>
+<head>
+  <!-- Define a codificação de caracteres para aceitar acentos em português -->
+  <meta charset="UTF-8">
+  <!-- Garante que a página se adapte a telas de celulares e computadores -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Paroquial - Espiritualidade e Fé</title>
+  <!-- Link que conecta este HTML ao arquivo de estilos CSS -->
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+ 
+  <!-- CARROSSEL DE NOTÍCIAS DA SEMANA -->
+  <!-- A tag <section> agrupa um bloco temático importante do site -->
+  <section class="secao-carrossel">
+    <h2>Notícias da Semana</h2>
+    
+    <!-- Container flexível com rolagem horizontal que simula o carrossel -->
+    <div class="carrossel-container">
+      
+      <!-- Cada Notícia é organizada dentro de um elemento <article> -->
+      <article class="cartao-noticia">
+        <h3>Santo do Dia</h3>
+        <p>Conheça a história de fé e dedicação do santo celebrado nesta semana.</p>
+      </article>
+
+      <article class="cartao-noticia">
+        <h3>Horários das Missas</h3>
+        <p>Confira nossa programação de celebrações e adorações comunitárias.</p>
+      </article>
+
+      <article class="cartao-noticia">
+        <h3>Ações Sociais e Doações</h3>
+        <p>Veja como a comunidade está ajudando as famílias necessitadas neste mês.</p>
+      </article>
+
+      <article class="cartao-noticia">
+        <h3>Inscrições para Catequese</h3>
+        <p>Abertas as turmas de preparação para crianças, jovens e adultos.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE DESENVOLVIMENTO COM OS 8 ITENS (Inspirado na Paróquia Santa Generosa) -->
+  <!-- A tag <main> indica o conteúdo principal da página -->
+  <main class="secao-desenvolvimento">
+    <h2>Desenvolvimento e Serviços Pastorais</h2>
+
+    <!-- Divisória flexível (Flexbox) para organizar os 8 cartões lado a lado -->
+    <div class="container-cards">
+
+      <!-- ITEM 1: Batismo -->
+      <article class="card-item">
+        <!-- O link <a> envolve a imagem tornando o item clicável para outra página -->
+        <a href="#" aria-label="Acessar informações sobre o Batismo">
+          <!-- O atributo 'alt' é essencial para a acessibilidade/leitores de tela -->
+          <img src="https://via.placeholder.com/300x200/F5EFE6/4A3E3D?text=Batismo" alt="Ilustração representando o Sacramento do Batismo">
+        </a>
+        <h3>Batismo</h3>
+        <p>Curso preparatório e celebração para novos cristãos.</p>
+      </article>
+
+      <!-- ITEM 2: Primeira Comunhão -->
+      <article class="card-item">
+        <a href="#" aria-label="Acessar informações sobre a Primeira Comunhão">
+          <img src="https://via.placeholder.com/300x200/F5EFE6/4A3E3D?text=Eucaristia" alt="Ilustração representando a Eucaristia e Primeira Comunhão">
+        </a>
+        <h3>Primeira Comunhão</h3>
+        <p>Catequese infantil e formação na Eucaristia.</p>
+      </article>
+
+      <!-- ITEM 3: Crisma -->
+      <article class="card-item">
+        <a href="#" aria-label="Acessar informações sobre a Crisma">
+          <img src="https://via.placeholder.com/300x200/F5EFE6/4A3E3D?text=Crisma" alt="Ilustração representando o Sacramento da Crisma">
+        </a>
+        <h3>Crisma</h3>
+        <p>Confirmação da fé para jovens e adultos.</p>
+      </article>
+
+      <!-- ITEM 4: Confissão e Reconciliação -->
+      <article class="card-item">
+        <a href="#" aria-label="Acessar horários de Confissão">
+          <img src="https://via.placeholder.com/300x200/F5EFE6/4A3E3D?text=Confissão" alt="Ilustração representando a Reconciliação e Confissão">
+        </a>
+        <h3>Confissão</h3>
+        <p>Horários do sacramento da reconciliação com os padres.</p>
+      </article>
+
+      <!-- ITEM 5: Matrimônio -->
+      <article class="card-item">
+        <a href="#" aria-label="Acessar agendamento de Matrimônio">
+          <img src="https://via.placeholder.com/300x200/F5EFE6/4A3E3D?text=Matrimônio" alt="Ilustração representando o Matrimônio">
+        </a>
+        <h3>Matrimônio</h3>
+        <p>Preparação de noivos e agendamento de casamentos.</p>
+      </article>
+
+      <!-- ITEM 6: Pastoral da Saúde -->
+      <article class="card-item">
+        <a href="#" aria-label="Acessar Pastoral da Saúde e Unção">
+          <img src="https://via.placeholder.com/300x200/F5EFE6/4A3E3D?text=Saúde+e+Unção" alt="Ilustração representando a Pastoral da Saúde e Unção">
+        </a>
+        <h3>Pastoral da Saúde</h3>
+        <p>Visita aos enfermos e Sacramento da Unção.</p>
+      </article>
+
+      <!-- ITEM 7: Serviço de Escuta -->
+      <article class="card-item">
+        <a href="#" aria-label="Acessar agendamento do Serviço de Escuta">
+          <img src="https://via.placeholder.com/300x200/F5EFE6/4A3E3D?text=Acolhimento" alt="Ilustração representando o Serviço de Escuta e Acolhimento">
+        </a>
+        <h3>Serviço de Escuta</h3>
+        <p>Atendimento acolhedor e apoio espiritual comunitário.</p>
+      </article>
+
+      <!-- ITEM 8: Dízimo e Obras Sociais -->
+      <article class="card-item">
+        <a href="#" aria-label="Acessar informações sobre Dízimo e Doações">
+          <img src="https://via.placeholder.com/300x200/F5EFE6/4A3E3D?text=Dízimo+e+Doações" alt="Ilustração representando Dízimo e Ações de Caridade">
+        </a>
+        <h3>Dízimo e Doações</h3>
+        <p>Apoie a manutenção da paróquia e projetos sociais.</p>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ DA PÁGINA -->
+  <footer class="rodape">
+    <p>&copy; 2026 Paróquia Espiritualidade e Fé. Projeto pedagógico focado em inclusão digital.</p>
+  </footer>
+
+</body>
+</html>
