@@ -1,120 +1,3 @@
-/* CONFIGURAÇÕES DO MENU DE NAVEGAÇÃO */
-
-/* Esconde o checkbox real da tela */
-.menu-checkbox {
-  display: none;
-}
-
-/* Estilo do Botão Hambúrguer (Escondido por padrão em telas grandes) */
-.btn-hamburguer {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-}
-
-/* As 3 linhas do botão hambúrguer */
-.btn-hamburguer span {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background-color: #3D3130;
-  border-radius: 3px;
-  transition: 0.3s;
-}
-
-/* ESTILO DO MENU EM TELAS GRANDES (COMPUTADOR) */
-.menu-navegacao ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem 1.5rem;
-  list-style: none;
-  padding: 0;
-}
-
-.menu-navegacao a {
-  color: #3D3130;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.menu-navegacao a:hover,
-.menu-navegacao a:focus {
-  background-color: #D4A359;
-  color: #FFFFFF;
-}
-
-/* REGRAS RESPONSIVAS PARA DISPOSITIVOS MÓVEIS (CELULARES) */
-@media (max-width: 768px) {
-  /* Exibe o botão hambúrguer no celular */
-  .btn-hamburguer {
-    display: flex;
-  }
-
-  /* Esconde a lista de navegação por padrão no celular */
-  .menu-navegacao {
-    display: none;
-    width: 100%;
-  }
-
-  .menu-navegacao ul {
-    flex-direction: column; /* Coloca os links um abaixo do outro */
-    align-items: center;
-    gap: 0.8rem;
-    padding-top: 1rem;
-  }
-
-  /* O SEGREDO DO CHECKBOX HACK:
-     Quando o checkbox estiver marcado (:checked), a <nav> imediatamente seguinte (+) é exibida! */
-  .menu-checkbox:checked + .btn-hamburguer + .menu-navegacao {
-    display: block;
-  }
-}/* CABEÇALHO PRINCIPAL COM FLEXBOX */
-.cabecalho-principal {
-  background-color: rgba(239, 230, 213, 0.95);
-  padding: 1.5rem 1rem;
-  border-bottom: 3px solid #D4A359;
-  
-  /* Organiza o título e o menu em coluna no celular */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
-}
-
-/* ESTILIZAÇÃO DA LISTA DO MENU (FLEXBOX) */
-.menu-navegacao ul {
-  display: flex;           /* Coloca os itens da lista lado a lado */
-  flex-wrap: wrap;         /* Permite que o menu dobre de linha em telas pequenas */
-  justify-content: center; /* Centraliza as opções do menu */
-  gap: 1rem 1.5rem;        /* Espaçamento vertical e horizontal entre os links */
-  list-style: none;        /* Remove os pontinhos padrão da lista <ul> */
-  padding: 0;
-}
-
-/* ESTILO DOS LINKS DO MENU */
-.menu-navegacao a {
-  color: #3D3130;
-  text-decoration: none;  /* Remove o sublinhado padrão dos links */
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-/* EFEITO AO PASSAR O MOUSE OU FOCAR VIA TECLADO */
-.menu-navegacao a:hover,
-.menu-navegacao a:focus {
-  background-color: #D4A359;
-  color: #FFFFFF;
-}
 /* RESET BÁSICO E CONFIGURAÇÕES GERAIS */
 * {
   box-sizing: border-box;
@@ -128,7 +11,7 @@ body {
   color: #3D3130;
   line-height: 1.6;
 
-  /* Aplicação da sua imagem com uma camada bege translúcida por cima para dar acessibilidade */
+  /* Aplicação da sua imagem com uma camada bege translúcida por cima */
   background-image: 
     linear-gradient(rgba(253, 251, 247, 0.45), rgba(253, 251, 247, 0.45)), 
     url('WhatsApp Image 2026-10-20 at 14.09.32.jpeg');
@@ -136,21 +19,106 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed; /* Efeito no qual a imagem fica fixa ao rolar a página */
+  background-attachment: fixed;
 }
 
-/* CABEÇALHO PRINCIPAL */
+/* CABEÇALHO PRINCIPAL COM FLEXBOX */
 .cabecalho-principal {
-  background-color: rgba(239, 230, 213, 0.9); /* Bege suave levemente transparente */
-  text-align: center;
-  padding: 2.5rem 1rem;
+  background-color: rgba(239, 230, 213, 0.95);
+  padding: 1.5rem 1rem;
   border-bottom: 3px solid #D4A359;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
 }
 
-.cabecalho-principal h1 {
-  font-size: 2.2rem;
+/* CONTAINER QUE ORGANIZA AS DUAS IMAGENS E O TÍTULO NO TOPO */
+.topo-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* PADRONIZAÇÃO DAS DUAS IMAGENS DO CABEÇALHO (ALTAR E 60 ANOS) */
+.logo-cabecalho {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #D4A359;
+}
+
+.header-titulos {
+  text-align: center;
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.header-titulos h1 {
+  font-size: 2rem;
   color: #3D3130;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+/* CONFIGURAÇÕES DO MENU DE NAVEGAÇÃO */
+
+/* Esconde o checkbox real da tela */
+.menu-checkbox {
+  display: none;
+}
+
+/* Botão Hambúrguer (Escondido em telas grandes) */
+.btn-hamburguer {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.btn-hamburguer span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #3D3130;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* MENU EM TELAS GRANDES (COMPUTADOR) */
+.menu-navegacao {
+  width: 100%;
+}
+
+.menu-navegacao ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.menu-navegacao a {
+  color: #3D3130;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.menu-navegacao a:hover,
+.menu-navegacao a:focus {
+  background-color: #D4A359;
+  color: #FFFFFF;
 }
 
 /* CARROSSEL DE NOTÍCIAS */
@@ -165,7 +133,7 @@ body {
   text-align: center;
   margin-bottom: 1.5rem;
   color: #4A3E3D;
-  background-color: rgba(253, 251, 247, 0.7); /* Destaca o título sobre a imagem */
+  background-color: rgba(253, 251, 247, 0.7);
   display: inline-block;
   padding: 0.3rem 1rem;
   border-radius: 4px;
@@ -181,7 +149,7 @@ body {
 
 .cartao-noticia {
   flex: 0 0 280px;
-  background-color: rgba(245, 239, 230, 0.95); /* Leve transparência para destacar o conteúdo */
+  background-color: rgba(245, 239, 230, 0.95);
   border: 1px solid #E5D9C5;
   border-radius: 8px;
   padding: 1.5rem;
@@ -211,7 +179,7 @@ body {
 .card-item {
   flex: 1 1 220px;
   max-width: 260px;
-  background-color: rgba(245, 239, 230, 0.95); /* Bege suave legível sobre o fundo */
+  background-color: rgba(245, 239, 230, 0.95);
   border: 1px solid #E5D9C5;
   border-radius: 8px;
   padding: 1rem;
@@ -256,4 +224,38 @@ body {
   margin-top: 3rem;
   font-size: 0.9rem;
   border-top: 1px solid #E5D9C5;
+}
+
+/* REGRAS RESPONSIVAS PARA DISPOSITIVOS MÓVEIS (CELULARES) */
+@media (max-width: 768px) {
+  .topo-cabecalho {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .logo-cabecalho {
+    width: 70px;
+    height: 70px;
+  }
+
+  .btn-hamburguer {
+    display: flex;
+  }
+
+  .menu-navegacao {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-navegacao ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding-top: 1rem;
+  }
+
+  /* Exibe o menu quando o checkbox estiver marcado */
+  .menu-checkbox:checked ~ .menu-navegacao {
+    display: block;
+  }
 }
